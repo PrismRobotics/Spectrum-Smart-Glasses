@@ -18,15 +18,14 @@ import ctypes
 import time
 import requests
 import shutil
-from twilio.rest import Client
 from ecapture import ecapture as ec
 from bs4 import BeautifulSoup
 from urllib.request import urlopen
 from vosk import Model, KaldiRecognizer
-import pyaudio
 import google.generativeai as genai
 import pyttsx3 as tts
 import pygame
+import pyaudio
 import threading as t
 from gtts import gTTS
 from time import sleep
@@ -34,7 +33,6 @@ import pygame
 import random
 from wolframclient.evaluation import WolframLanguageSession
 from wolframclient.language import wl, wlexpr
-session = WolframLanguageSession('/home/raspberry/.local/lib/python3.11/site-packages/wolframclient/evaluation/kernel')
 
 pygame.init()
 
@@ -44,7 +42,7 @@ def speak(text):
     tts = gTTS(text)
     tts.save("voice.wav")
     sleep(0.5)
-    talking = pygame.mixer.Sound('/home/raspberry/PROJECT-SPECTRA-VOICE/voice.wav')
+    talking = pygame.mixer.Sound('/workspaces/Spectrum-Smart-Glasses/voice.wav')
     print(text)
     JTALKING = True
     UTALKING = False
