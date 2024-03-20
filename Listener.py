@@ -205,6 +205,11 @@ while True:
                 current_time = now.strftime("%H:%M:%S")
                 print("Current Time =", current_time)
                 speak(f"The time is {current_time}")
+            elif ("what's today" in userInput) or ("today's date" in user Input) or ("what is today" in userInput) or ("whats today" in userInput) or ("todays date" in userInput):
+                today = datetime.date.today()
+                date = today.strftime("%B %d, %Y")
+                speak("Today is " + today.strftime("%B %d, %Y"))
+            elif 
             else:
                  response = WolfA_GMI(userInput)
                  gen_str = ['Generating.', 'One moment please', 'Hmm. Let me think.', 'Just a moment', 'Thinking.']
